@@ -1,0 +1,51 @@
+[
+  {
+    "id":1,
+    "name":"Pulp Fiction",
+    "director":"Quentin Tarantino",
+    "year":1994,
+    "country":"EEUU"
+  },
+  {
+    "id":2,
+    "name":"El padrino",
+    "director":"Francis Ford Coppola",
+    "year":1972,
+    "country":"EEUU"
+  },
+  {
+    "id":3,
+    "name":"La vida es bella",
+    "director":"Roberto Benigni",
+    "year":1997,
+    "country":"Italy"
+  },
+  {
+    "id":4,
+    "name":"El club de la lucha",
+    "director":"David Fincher",
+    "year":1999,
+    "country":"EEUU"
+  },
+  {
+    "id":5,
+    "name":"Cadena perpetua",
+    "director":"David Fincher",
+    "year":1994,
+    "country":"EEUU"
+  },
+  {
+    "id":6,
+    "name":"La isla de Schindler",
+    "director":"Steven Spielberg",
+    "year":1993,
+    "country":"EEUU"
+  },
+  {
+    "id":7,
+    "name":"La naranja mecánica",
+    "director":"Stanley Kubrick",
+    "year":1971,
+    "country":"Reino Unido"
+  }
+]
