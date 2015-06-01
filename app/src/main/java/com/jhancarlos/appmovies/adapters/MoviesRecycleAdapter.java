@@ -1,7 +1,9 @@
 package com.jhancarlos.appmovies.adapters;
 
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -31,6 +33,8 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
         public ImageView image;
         public TextView name;
         public TextView director;
+        Movie movie;
+        public Toolbar tbCard;
 
 
         public ViewHolder(View itemView){
@@ -41,7 +45,7 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
                 public void onClick(View v) {
 
                     if (itemRecycleClickListener != null) {
-                        Movie movie = movies.get(getLayoutPosition());
+                        movie = movies.get(getLayoutPosition());
                         itemRecycleClickListener.itemRecycleClicked(getLayoutPosition(), movie.getName());
                     }
 
@@ -50,7 +54,8 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
             });
 
             image = (ImageView) itemView.findViewById(R.id.image);
-            name = (TextView) itemView.findViewById(R.id.name);
+           /// name = (TextView) itemView.findViewById(R.id.name);
+             tbCard = (Toolbar) itemView.findViewById(R.id.tbCard);
             director = (TextView) itemView.findViewById(R.id.director);
 
         }
@@ -64,40 +69,64 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, int position) {
 
-        Movie movie = movies.get(position);
-        viewHolder.name.setText(movie.getName());
+        final Movie movie = movies.get(position);
+        //viewHolder.name.setText(movie.getName());
         viewHolder.director.setText(movie.getDirector());
+
+
+        viewHolder.tbCard.setTitle(movie.getName());
+
+        viewHolder.tbCard.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.action_delete:
+                        movies.remove(movie);
+                        notifyDataSetChanged();
+                        break;
+                }
+                return true;
+            }
+        });
+
+        viewHolder.tbCard.inflateMenu(R.menu.menu_card);
 
         switch (movie.getId()) {
             case 1:
-
+                movie.setIdPhoto(R.drawable.pulp_fiction);
                 viewHolder.image.setImageResource(R.drawable.pulp_fiction);
                 break;
 
             case 2:
-
+                movie.setIdPhoto(R.drawable.el_padrino);
                 viewHolder.image.setImageResource(R.drawable.el_padrino);
                 break;
 
             case 3:
+                movie.setIdPhoto(R.drawable.la_vida_es_bella);
                 viewHolder.image.setImageResource(R.drawable.la_vida_es_bella);
                 break;
 
             case 4:
+                movie.setIdPhoto(R.drawable.el_club_de_la_lucha);
                 viewHolder.image.setImageResource(R.drawable.el_club_de_la_lucha);
                 break;
 
             case 5:
+                movie.setIdPhoto(R.drawable.cadena_perpetua);
                 viewHolder.image.setImageResource(R.drawable.cadena_perpetua);
                 break;
 
             case 6:
+                movie.setIdPhoto(R.drawable.la_lista_de_schindler);
                 viewHolder.image.setImageResource(R.drawable.la_lista_de_schindler);
                 break;
 
             case 7:
+                movie.setIdPhoto(R.drawable.la_naranja_mec_nica);
                 viewHolder.image.setImageResource(R.drawable.la_naranja_mec_nica);
                 break;
             default:
@@ -119,5 +148,6 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
     public void setItemRecycleClickListener(ItemRecycleClickListener itemRecycleClickListener){
         this.itemRecycleClickListener = itemRecycleClickListener;
     }
+
 
 }

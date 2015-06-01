@@ -6,4 +6,11 @@
     <string name="navigation_drawer_close">Close</string>
     <string name="home">Inicio</string>
     <string name="movies">Movies</string>
+    <string name="fragment_movie_create_accept">Crear</string>
+    <string name="movie_detail_description">Movie Photo</string>
+    <string name="list_of_movies">List of Movies</string>
+    <string name="new_movie">New Movie</string>
+    <string name="detail_movie">Detail Movie</string>
+    <string name="card_delete">Delete</string>
+    <string name="description_card">Description card movie</string>
 </resources>

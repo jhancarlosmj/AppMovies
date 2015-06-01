@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:foreground="?android:attr/selectableItemBackground"
-    android:layout_margin="10dp"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    card_view:cardUseCompatPadding = "true"
     card_view:cardCornerRadius="2dp">
 
             <RelativeLayout
 
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
                     android:src="@drawable/el_padrino"
-                    android:scaleType="fitCenter"
-                    android:id="@+id/image"/>
+                    android:scaleType="centerCrop"
+                    android:id="@+id/image"
+                    android:contentDescription="@string/description_card" />
 
-                            <TextView
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tbCard"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_below="@+id/image"
+                    android:layout_centerHorizontal="true">
+
+                </android.support.v7.widget.Toolbar>
+
+                            <!--<TextView
                                 android:paddingLeft="10dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -32,26 +46,24 @@
                                 android:textSize="18sp"
                                 android:id="@+id/name"
                                 android:textColor="@color/primary_dark"
-                                android:layout_toEndOf="@+id/image"
-                                android:layout_toRightOf="@+id/image"
                                 android:layout_gravity="center"
-                                android:layout_above="@+id/director"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginBottom="18dp" />
+                                android:layout_below="@+id/image"
+                                android:layout_centerHorizontal="true" />-->
 
                             <TextView
                                 android:paddingLeft="10dp"
-                                android:layout_width="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="No me acuerdo"
                                 android:textSize="16sp"
                                 android:id="@+id/director"
-                                android:textColor="@color/primary"
-                                android:layout_alignBottom="@+id/image"
-                                android:layout_toRightOf="@+id/image"
-                                android:layout_toEndOf="@+id/image"
-                                android:layout_marginBottom="36dp" />
+                                android:textColor="@color/black"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignLeft="@+id/image"
+                                android:layout_alignStart="@+id/image"
+                                android:layout_alignRight="@+id/image"
+                                android:layout_alignEnd="@+id/image" />
 
             </RelativeLayout>
 

@@ -2,6 +2,7 @@ package com.jhancarlos.appmovies.fragments;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,12 +50,38 @@ public class MovieAddFragment extends NestedActivityResultFragment {
     }
     public void addMovie(){
         Movie movie = new Movie();
-        movie.setName((String) mNameMovie.getText());
-        movie.setDirector((String) mDirectorMovie.getText());
-        movie.setYear(Integer.parseInt((String) mYearMovie.getText()));
-        movie.setCountry((String) mCountryMovie.getText());
+
+        movie.setIdPhoto(R.drawable.caratula_default);
+
+        if(mNameMovie.getText().toString().equals("")){
+            movie.setName("Default Title");
+        }else{
+            movie.setName(mNameMovie.getText().toString());
+        }
+
+
+        if(mDirectorMovie.getText().toString().equals("")){
+            movie.setDirector("Default Director");
+        }else{
+            movie.setDirector(mDirectorMovie.getText().toString());
+        }
+
+        if(mYearMovie.getText().toString().trim().equals("")){
+            movie.setYear(1900);
+        }else{
+        movie.setYear(Integer.parseInt(mYearMovie.getText().toString().trim()));
+        }
+
+        if(mCountryMovie.getText().toString().equals("")){
+            movie.setCountry("Default Country");
+        }else{
+            movie.setCountry(mCountryMovie.getText().toString());
+        }
 
         MovieFactoryJson.data.add(movie);
+
+        Log.d("Tamanyo data", "" + MovieFactoryJson.data.size());
+        Log.d("Movie add", "" + movie);
 
         getActivity().finish();
     }

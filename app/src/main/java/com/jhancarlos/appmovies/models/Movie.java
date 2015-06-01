@@ -70,4 +70,16 @@ public class Movie {
     public void setIdPhoto(int idPhoto) {
         this.idPhoto = idPhoto;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", director='" + director + '\'' +
+                ", year=" + year +
+                ", country='" + country + '\'' +
+                ", idPhoto=" + idPhoto +
+                '}';
+    }
 }

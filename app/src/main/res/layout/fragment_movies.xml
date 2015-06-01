@@ -9,7 +9,9 @@
         android:scrollbars="vertical"
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
 
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
