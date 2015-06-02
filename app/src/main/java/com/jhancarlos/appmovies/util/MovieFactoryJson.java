@@ -57,7 +57,7 @@ public class MovieFactoryJson {
                 movie.setDirector(jsonObject.getString(ID_DIRECTOR));
                 movie.setYear(jsonObject.getInt(ID_YEAR));
                 movie.setCountry(jsonObject.getString(ID_COUNTRY));
-                data.add(movie);
+                addMovie(movie);
 
             }
 
@@ -71,6 +71,12 @@ public class MovieFactoryJson {
 
 
             return data;
+    }
+
+    private void addMovie(Movie movie){
+
+        if (!data.contains(movie)) data.add(movie);
+
     }
 
 }
