@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.models.Movie;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -97,40 +98,40 @@ public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdap
         switch (movie.getId()) {
             case 1:
                 movie.setIdPhoto(R.drawable.pulp_fiction);
-                viewHolder.image.setImageResource(R.drawable.pulp_fiction);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.pulp_fiction).into(viewHolder.image);
                 break;
 
             case 2:
                 movie.setIdPhoto(R.drawable.el_padrino);
-                viewHolder.image.setImageResource(R.drawable.el_padrino);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.el_padrino).into(viewHolder.image);
                 break;
 
             case 3:
                 movie.setIdPhoto(R.drawable.la_vida_es_bella);
-                viewHolder.image.setImageResource(R.drawable.la_vida_es_bella);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.la_vida_es_bella).into(viewHolder.image);
                 break;
 
             case 4:
                 movie.setIdPhoto(R.drawable.el_club_de_la_lucha);
-                viewHolder.image.setImageResource(R.drawable.el_club_de_la_lucha);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.el_club_de_la_lucha).into(viewHolder.image);
                 break;
 
             case 5:
                 movie.setIdPhoto(R.drawable.cadena_perpetua);
-                viewHolder.image.setImageResource(R.drawable.cadena_perpetua);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.cadena_perpetua).into(viewHolder.image);
                 break;
 
             case 6:
                 movie.setIdPhoto(R.drawable.la_lista_de_schindler);
-                viewHolder.image.setImageResource(R.drawable.la_lista_de_schindler);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.la_lista_de_schindler).into(viewHolder.image);
                 break;
 
             case 7:
                 movie.setIdPhoto(R.drawable.la_naranja_mec_nica);
-                viewHolder.image.setImageResource(R.drawable.la_naranja_mec_nica);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.la_naranja_mec_nica).into(viewHolder.image);
                 break;
             default:
-                viewHolder.image.setImageResource(R.drawable.caratula_default);
+                Picasso.with(viewHolder.image.getContext()).load(R.drawable.caratula_default).into(viewHolder.image);
         }
         viewHolder.itemView.setTag(movie);
     }

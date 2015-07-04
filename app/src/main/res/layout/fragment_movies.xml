@@ -25,6 +25,7 @@
         fab:fab_colorRipple="@color/accent"
         fab:fab_shadow="true"
         fab:fab_type="normal"
+        fab:fab_size="normal"
 
         />
 
