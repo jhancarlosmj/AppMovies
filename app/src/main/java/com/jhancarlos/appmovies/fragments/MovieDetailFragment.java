@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jhancarlos.appmovies.Manager.MoviesManagerGET;
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.models.Movie;
-import com.jhancarlos.appmovies.util.MovieFactoryJson;
 
 
 /**
@@ -47,12 +47,13 @@ public class MovieDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        int currentMovieId = getActivity().getIntent().getExtras().getInt(KEY_CURRENT_MOVIE);
+
+        Long currentMovieId = getActivity().getIntent().getExtras().getLong(KEY_CURRENT_MOVIE);
 
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
 
 
-        currentMovie = MovieFactoryJson.data.get(currentMovieId);
+        currentMovie = MoviesManagerGET.getInstance().getMovie(currentMovieId);
 
         getActivity().setTitle(currentMovie.getName());
 

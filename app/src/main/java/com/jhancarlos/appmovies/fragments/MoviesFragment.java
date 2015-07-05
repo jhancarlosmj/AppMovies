@@ -74,7 +74,7 @@ public class MoviesFragment extends Fragment implements ItemRecycleClickListener
     @Override
     public void itemRecycleClicked(int position, String name) {
         Intent i = new Intent(getActivity(), MovieDetailActivity.class);
-        i.putExtra("KEY_CURRENT_MOVIE",position);
+        i.putExtra("KEY_CURRENT_MOVIE", moviesArrayList.get(position).getId());
         this.startActivity(i);
         Log.d("Position",""+position);
     }
@@ -86,6 +86,7 @@ public class MoviesFragment extends Fragment implements ItemRecycleClickListener
         moviesRecycleAdapter.setItemRecycleClickListener(this);
         movieRecyclerView = (RecyclerView) root.findViewById(R.id.my_recycler_view);
         movieRecyclerView.setHasFixedSize(true);
+
 
         SimpleOrientationListener mOrientationListener = new SimpleOrientationListener(getActivity()) {
 

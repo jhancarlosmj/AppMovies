@@ -12,6 +12,7 @@ public class MoviesManagerGET implements RestCallback {
 	public static MoviesManagerGET moviesManagerGET;
 	private MoviesCallback moviesCallback;
 	private Context appContext;
+	private Movie[] movies;
 
 	private MoviesManagerGET() {
 	}
@@ -43,6 +44,16 @@ public class MoviesManagerGET implements RestCallback {
 		httpRequestGETMovies.execute();
 	}
 
+	public synchronized Movie getMovie(Long id){
+		for(Movie movie : movies){
+			if(movie.getId().equals(id)){
+				return movie;
+			}
+		}
+
+		return null;
+	}
+
 	@Override
 	public synchronized void onPreExecute() {
 
@@ -51,7 +62,7 @@ public class MoviesManagerGET implements RestCallback {
 	@Override
 	public synchronized void onPostExecute(Object o) {
 		if (o instanceof Movie[]) {
-			Movie[] movies = (Movie[]) o;
+			movies = (Movie[]) o;
 			moviesCallback.onGetMoviesResult(movies);
 		}
 	}

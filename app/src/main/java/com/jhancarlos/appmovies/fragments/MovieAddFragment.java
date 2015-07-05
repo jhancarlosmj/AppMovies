@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.models.Movie;
-import com.jhancarlos.appmovies.util.MovieFactoryJson;
 
 
 /**
@@ -77,9 +76,9 @@ public class MovieAddFragment extends Fragment {
             movie.setCountry(mCountryMovie.getText().toString());
         }
 
-        MovieFactoryJson.data.add(movie);
+        /*MovieFactoryJson.data.add(movie);
 
-        Log.d("Tamanyo data", "" + MovieFactoryJson.data.size());
+        Log.d("Tamanyo data", "" + MovieFactoryJson.data.size());*/
         Log.d("Movie add", "" + movie);
 
         getActivity().finish();
