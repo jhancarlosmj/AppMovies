@@ -1,6 +1,7 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -19,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitStart"
-                android:src="@drawable/pulp_fiction"
+                android:src="@drawable/caratula_default"
                 android:adjustViewBounds="false"
                 android:contentDescription="@string/movie_detail_description"
                 android:layout_gravity="center"
@@ -87,4 +88,10 @@
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </LinearLayout>
+
+</LinearLayout>

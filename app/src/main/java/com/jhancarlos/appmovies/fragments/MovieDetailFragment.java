@@ -2,7 +2,7 @@ package com.jhancarlos.appmovies.fragments;
 
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.inthecheesefactory.thecheeselibrary.fragment.support.v4.app.NestedActivityResultFragment;
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.models.Movie;
 import com.jhancarlos.appmovies.util.MovieFactoryJson;
@@ -20,7 +19,7 @@ import com.jhancarlos.appmovies.util.MovieFactoryJson;
 /**
  * Created by DAM on 21/5/15.
  */
-public class MovieDetailFragment extends NestedActivityResultFragment {
+public class MovieDetailFragment extends Fragment {
 
 
     public static final String KEY_CURRENT_MOVIE = "KEY_CURRENT_MOVIE";
@@ -52,6 +51,7 @@ public class MovieDetailFragment extends NestedActivityResultFragment {
 
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
 
+
         currentMovie = MovieFactoryJson.data.get(currentMovieId);
 
         getActivity().setTitle(currentMovie.getName());
@@ -63,10 +63,9 @@ public class MovieDetailFragment extends NestedActivityResultFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.fragment_detailmovie, container, false);
 
-        mCaratulaDetailMovie = (ImageView) root.findViewById(R.id.movie_detail_photo);
-        mCaratulaDetailMovie.setImageResource(currentMovie.getIdPhoto());
 
         mNameDetailMovie = (TextView) root.findViewById(R.id.movie_detail_title);
         mNameDetailMovie.setText(currentMovie.getName());

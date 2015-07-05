@@ -20,50 +20,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
-                    android:src="@drawable/el_padrino"
+                    android:src="@drawable/caratula_default"
                     android:scaleType="centerCrop"
                     android:id="@+id/image"
                     android:contentDescription="@string/description_card" />
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/tbCard"
-                    android:layout_height="?attr/actionBarSize"
-                    android:layout_width="match_parent"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                    android:layout_below="@+id/image"
-                    android:layout_centerHorizontal="true">
 
-                </android.support.v7.widget.Toolbar>
-
-                            <!--<TextView
+                <TextView
                                 android:paddingLeft="10dp"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="El señor de los anillos"
-                                android:textSize="18sp"
+                                android:textSize="16sp"
                                 android:id="@+id/name"
                                 android:textColor="@color/primary_dark"
                                 android:layout_gravity="center"
                                 android:layout_below="@+id/image"
-                                android:layout_centerHorizontal="true" />-->
+                                android:layout_alignLeft="@+id/image"
+                                android:layout_alignStart="@+id/image"
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:paddingLeft="10dp"
-                                android:layout_marginBottom="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="No me acuerdo"
                                 android:textSize="16sp"
                                 android:id="@+id/director"
                                 android:textColor="@color/black"
-                                android:layout_alignParentBottom="true"
-                                android:layout_alignLeft="@+id/image"
-                                android:layout_alignStart="@+id/image"
-                                android:layout_alignRight="@+id/image"
-                                android:layout_alignEnd="@+id/image" />
+                                android:layout_below="@+id/name"
+                                android:layout_alignLeft="@+id/name"
+                                android:layout_alignStart="@+id/name"/>
 
             </RelativeLayout>
 

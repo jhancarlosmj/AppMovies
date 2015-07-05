@@ -2,13 +2,13 @@ package com.jhancarlos.appmovies.fragments;
 
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.inthecheesefactory.thecheeselibrary.fragment.support.v4.app.NestedActivityResultFragment;
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.models.Movie;
 import com.jhancarlos.appmovies.util.MovieFactoryJson;
@@ -17,7 +17,7 @@ import com.jhancarlos.appmovies.util.MovieFactoryJson;
 /**
  * Created by DAM on 21/5/15.
  */
-public class MovieAddFragment extends NestedActivityResultFragment {
+public class MovieAddFragment extends Fragment {
 
     private TextView mNameMovie;
     private TextView mDirectorMovie;
@@ -51,7 +51,6 @@ public class MovieAddFragment extends NestedActivityResultFragment {
     public void addMovie(){
         Movie movie = new Movie();
 
-        movie.setIdPhoto(R.drawable.caratula_default);
 
         if(mNameMovie.getText().toString().equals("")){
             movie.setName("Default Title");
