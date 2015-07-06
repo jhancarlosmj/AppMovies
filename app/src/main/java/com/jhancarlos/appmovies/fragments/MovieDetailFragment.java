@@ -29,6 +29,7 @@ public class MovieDetailFragment extends Fragment {
     private TextView mDirectorDetailMovie;
     private TextView mYearDetailMovie;
     private TextView mCountryDetailMovie;
+    private TextView mGenreDetailMovie;
     private Toolbar toolbar;
 
 
@@ -79,6 +80,9 @@ public class MovieDetailFragment extends Fragment {
 
         mCountryDetailMovie = (TextView) root.findViewById(R.id.movie_detail_country);
         mCountryDetailMovie.setText(currentMovie.getCountry());
+
+        mGenreDetailMovie = (TextView) root.findViewById(R.id.movie_detail_genre);
+        mGenreDetailMovie.setText(""+currentMovie.getGenre());
 
         return root;
     }

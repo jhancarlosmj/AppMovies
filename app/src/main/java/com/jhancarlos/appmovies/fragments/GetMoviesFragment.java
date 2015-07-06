@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jhancarlos.appmovies.HttpRequest.MoviesCallback;
+import com.jhancarlos.appmovies.HttpRequest.GetMoviesCallback;
 import com.jhancarlos.appmovies.Manager.MoviesManagerGET;
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.activities.MovieAddActivity;
@@ -30,19 +30,19 @@ import java.util.List;
 /**
  * Created by DAM on 18/5/15.
  */
-public class MoviesFragment extends Fragment implements ItemRecycleClickListener, MoviesCallback {
+public class GetMoviesFragment extends Fragment implements ItemRecycleClickListener, GetMoviesCallback {
 
     private RecyclerView movieRecyclerView;
     private View root;
     private List<Movie> moviesArrayList;
     private FloatingActionButton fabBtn;
 
-    public MoviesFragment(){
+    public GetMoviesFragment(){
 
     }
 
-    public static MoviesFragment newInstance(){
-        MoviesFragment moviesFragment = new MoviesFragment();
+    public static GetMoviesFragment newInstance(){
+        GetMoviesFragment moviesFragment = new GetMoviesFragment();
         Bundle extraArguments = new Bundle();
         moviesFragment.setArguments(extraArguments);
         return moviesFragment;
@@ -55,8 +55,7 @@ public class MoviesFragment extends Fragment implements ItemRecycleClickListener
 
         root = inflater.inflate(R.layout.fragment_movies, container, false);
 
-        MoviesManagerGET.getInstance().setMoviesCallback(this);
-        MoviesManagerGET.getInstance().loadMoviesFromServer();
+
 
         return root;
 
@@ -65,6 +64,10 @@ public class MoviesFragment extends Fragment implements ItemRecycleClickListener
     @Override
     public void onResume(){
         super.onResume();
+
+        MoviesManagerGET.getInstance().setGetMoviesCallback(this);
+        MoviesManagerGET.getInstance().loadMoviesFromServer();
+
         if (movieRecyclerView != null && movieRecyclerView.getAdapter() != null) {
             movieRecyclerView.getAdapter().notifyDataSetChanged();
         }

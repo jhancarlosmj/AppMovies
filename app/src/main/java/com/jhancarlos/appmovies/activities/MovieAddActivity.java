@@ -8,7 +8,6 @@ import android.view.MenuItem;
 
 import com.jhancarlos.appmovies.R;
 import com.jhancarlos.appmovies.fragments.MovieAddFragment;
-import com.jhancarlos.appmovies.fragments.MoviesFragment;
 
 /**
  * Created by DAM on 28/5/15.

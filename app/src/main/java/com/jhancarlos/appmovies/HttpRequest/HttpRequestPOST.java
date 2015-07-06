@@ -3,6 +3,7 @@ package com.jhancarlos.appmovies.HttpRequest;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.jhancarlos.appmovies.models.Movie;
 import com.jhancarlos.appmovies.util.Configuration;
 
 import org.springframework.http.ResponseEntity;
@@ -40,7 +41,7 @@ public class HttpRequestPOST extends AsyncTask<Void, Void, Object> {
 			RestTemplate restTemplate = new RestTemplate();
 			restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
-			ResponseEntity<Object> response = restTemplate.postForEntity(url, this.param, Object
+			ResponseEntity<Movie> response = restTemplate.postForEntity(url, this.param, Movie
 					.class);
 
 			Log.i("HttpRequestPOST", "doInBackground " + response.getStatusCode());

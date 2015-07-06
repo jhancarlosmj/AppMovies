@@ -5,6 +5,6 @@ import com.jhancarlos.appmovies.models.Movie;
 /**
  * Created by Warren on 31/03/2015.
  */
-public interface MoviesCallback {
+public interface GetMoviesCallback {
 	void onGetMoviesResult(Movie[] movies);
 }

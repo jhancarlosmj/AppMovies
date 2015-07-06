@@ -4,25 +4,25 @@ package com.jhancarlos.appmovies.Manager;
 import android.content.Context;
 
 import com.jhancarlos.appmovies.HttpRequest.HttpRequestGETMovies;
-import com.jhancarlos.appmovies.HttpRequest.MoviesCallback;
+import com.jhancarlos.appmovies.HttpRequest.GetMoviesCallback;
 import com.jhancarlos.appmovies.HttpRequest.RestCallback;
 import com.jhancarlos.appmovies.models.Movie;
 
 public class MoviesManagerGET implements RestCallback {
 	public static MoviesManagerGET moviesManagerGET;
-	private MoviesCallback moviesCallback;
+	private GetMoviesCallback getMoviesCallback;
 	private Context appContext;
 	private Movie[] movies;
 
 	private MoviesManagerGET() {
 	}
 
-	public MoviesCallback getMoviesCallback() {
-		return moviesCallback;
+	public GetMoviesCallback getGetMoviesCallback() {
+		return getMoviesCallback;
 	}
 
-	public void setMoviesCallback(MoviesCallback moviesCallback) {
-		this.moviesCallback = moviesCallback;
+	public void setGetMoviesCallback(GetMoviesCallback getMoviesCallback) {
+		this.getMoviesCallback = getMoviesCallback;
 	}
 
 	public static synchronized MoviesManagerGET getInstance() {
@@ -63,7 +63,7 @@ public class MoviesManagerGET implements RestCallback {
 	public synchronized void onPostExecute(Object o) {
 		if (o instanceof Movie[]) {
 			movies = (Movie[]) o;
-			moviesCallback.onGetMoviesResult(movies);
+			getMoviesCallback.onGetMoviesResult(movies);
 		}
 	}
 

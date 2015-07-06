@@ -13,4 +13,25 @@
     <string name="detail_movie">Detail Movie</string>
     <string name="card_delete">Delete</string>
     <string name="description_card">Description card movie</string>
+    <string-array name="genres">
+        <item>ACTION</item>
+        <item>ADVENTURE</item>
+        <item>ANIMATION</item>
+        <item>COMEDY</item>
+        <item>CRIME</item>
+        <item>DOCUMENTARY</item>
+        <item>DRAMA</item>
+        <item>FANTASY</item>
+        <item>HISTORY</item>
+        <item>HORROR</item>
+        <item>MUSIC</item>
+        <item>ROMANCE</item>
+        <item>SCIFI</item>
+        <item>SPORT</item>
+        <item>THRILLER</item>
+        <item>WAR</item>
+        <item>WESTERN</item>
+    </string-array>
 </resources>
+   <!-- ACTION, ADVENTURE, ANIMATION, COMEDY, CRIME, DOCUMENTARY, DRAMA, FANTASY, HISTORY, HORROR,
+    MUSIC, ROMANCE, SCIFI, SPORT, THRILLER, WAR, WESTREN-->
