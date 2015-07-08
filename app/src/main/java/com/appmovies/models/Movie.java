@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.models;
+package com.appmovies.models;
 
 import android.graphics.drawable.Drawable;
 

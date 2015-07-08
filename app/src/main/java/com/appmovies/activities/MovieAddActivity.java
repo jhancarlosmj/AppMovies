@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.activities;
+package com.appmovies.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,12 +6,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.jhancarlos.appmovies.R;
-import com.jhancarlos.appmovies.fragments.MovieAddFragment;
+import com.appmovies.R;
+import com.appmovies.fragments.MovieAddFragment;
 
-/**
- * Created by DAM on 28/5/15.
- */
 public class MovieAddActivity extends BaseActivity {
 
     @Override

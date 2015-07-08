@@ -1,6 +1,6 @@
-package com.jhancarlos.appmovies.HttpRequest;
+package com.appmovies.HttpRequest;
 
-import com.jhancarlos.appmovies.models.Movie;
+import com.appmovies.models.Movie;
 
 public class HttpRequestGETMovies extends HttpRequestGET {
 

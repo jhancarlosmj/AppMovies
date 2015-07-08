@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.fragments;
+package com.appmovies.fragments;
 
 
 import android.os.Bundle;
@@ -11,14 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jhancarlos.appmovies.Manager.MoviesManagerGET;
-import com.jhancarlos.appmovies.R;
-import com.jhancarlos.appmovies.models.Movie;
+import com.appmovies.Manager.MoviesManagerGET;
+import com.appmovies.R;
+import com.appmovies.models.Movie;
 
-
-/**
- * Created by DAM on 21/5/15.
- */
 public class MovieDetailFragment extends Fragment {
 
 

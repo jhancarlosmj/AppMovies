@@ -1,25 +1,22 @@
-package com.jhancarlos.appmovies.activities;
+package com.appmovies.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.jhancarlos.appmovies.fragments.GetMoviesFragment;
+import com.appmovies.fragments.MovieDetailFragment;
 
 /**
  * Created by Jhancarlos on 30/05/2015.
  */
-public class MovieActivity extends BaseActivity {
-
+public class MovieDetailActivity extends BaseActivity {
 
     @Override
     protected Fragment createFragment() {
-        return GetMoviesFragment.newInstance();
+        return MovieDetailFragment.newInstance();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 }

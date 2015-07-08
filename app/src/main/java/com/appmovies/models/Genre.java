@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.models;
+package com.appmovies.models;
 
 public enum Genre {
 	ACTION, ADVENTURE, ANIMATION, COMEDY, CRIME, DOCUMENTARY, DRAMA, FANTASY, HISTORY, HORROR,

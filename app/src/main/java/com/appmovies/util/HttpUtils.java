@@ -1,12 +1,9 @@
-package com.jhancarlos.appmovies.util;
+package com.appmovies.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-/**
- * Created by Warren on 09/03/2015.
- */
 public class HttpUtils {
 	public static boolean isNetworkAvailable(Context appContext) {
 		ConnectivityManager connectivityManager

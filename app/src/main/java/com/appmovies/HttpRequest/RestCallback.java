@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.HttpRequest;
+package com.appmovies.HttpRequest;
 
 public interface RestCallback {
 	public void onPreExecute();

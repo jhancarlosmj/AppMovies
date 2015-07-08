@@ -1,14 +1,14 @@
-package com.jhancarlos.appmovies.Manager;
+package com.appmovies.Manager;
 
 
 import android.content.Context;
 import android.util.Log;
 
-import com.jhancarlos.appmovies.HttpRequest.AddMovieCallback;
-import com.jhancarlos.appmovies.HttpRequest.HttpRequestPOST;
-import com.jhancarlos.appmovies.HttpRequest.RestCallback;
-import com.jhancarlos.appmovies.models.Movie;
-import com.jhancarlos.appmovies.util.HttpUtils;
+import com.appmovies.HttpRequest.AddMovieCallback;
+import com.appmovies.HttpRequest.HttpRequestPOST;
+import com.appmovies.HttpRequest.RestCallback;
+import com.appmovies.models.Movie;
+import com.appmovies.util.HttpUtils;
 
 public class MovieManagerPOST implements RestCallback {
 	public static MovieManagerPOST movieManagerPOST;

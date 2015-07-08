@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.util;
+package com.appmovies.util;
 
 import android.content.Context;
 import android.content.res.Configuration;

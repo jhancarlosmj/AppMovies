@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.adapters;
+package com.appmovies.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,14 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jhancarlos.appmovies.R;
-import com.jhancarlos.appmovies.models.Movie;
+import com.appmovies.R;
+import com.appmovies.models.Movie;
 
 import java.util.List;
 
-/**
- * Created by DAM on 18/5/15.
- */
 public class MoviesRecycleAdapter extends RecyclerView.Adapter<MoviesRecycleAdapter.ViewHolder> {
 
 	private List<Movie> movies;

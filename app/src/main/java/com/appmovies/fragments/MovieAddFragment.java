@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.fragments;
+package com.appmovies.fragments;
 
 
 import android.os.Bundle;
@@ -10,16 +10,12 @@ import android.view.ViewGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.jhancarlos.appmovies.HttpRequest.AddMovieCallback;
-import com.jhancarlos.appmovies.Manager.MovieManagerPOST;
-import com.jhancarlos.appmovies.R;
-import com.jhancarlos.appmovies.models.Genre;
-import com.jhancarlos.appmovies.models.Movie;
+import com.appmovies.HttpRequest.AddMovieCallback;
+import com.appmovies.Manager.MovieManagerPOST;
+import com.appmovies.R;
+import com.appmovies.models.Genre;
+import com.appmovies.models.Movie;
 
-
-/**
- * Created by DAM on 21/5/15.
- */
 public class MovieAddFragment extends Fragment implements AddMovieCallback {
 
 	private TextView mNameMovie;

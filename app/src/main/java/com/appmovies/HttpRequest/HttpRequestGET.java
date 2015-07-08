@@ -1,9 +1,9 @@
-package com.jhancarlos.appmovies.HttpRequest;
+package com.appmovies.HttpRequest;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.jhancarlos.appmovies.util.Configuration;
+import com.appmovies.util.Configuration;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

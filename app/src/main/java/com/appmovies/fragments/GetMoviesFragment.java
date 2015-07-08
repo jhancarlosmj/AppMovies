@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies.fragments;
+package com.appmovies.fragments;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -13,23 +13,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jhancarlos.appmovies.HttpRequest.GetMoviesCallback;
-import com.jhancarlos.appmovies.Manager.MoviesManagerGET;
-import com.jhancarlos.appmovies.R;
-import com.jhancarlos.appmovies.activities.MovieAddActivity;
-import com.jhancarlos.appmovies.activities.MovieDetailActivity;
-import com.jhancarlos.appmovies.adapters.MoviesRecycleAdapter;
-import com.jhancarlos.appmovies.adapters.MoviesRecycleAdapter.ItemRecycleClickListener;
-import com.jhancarlos.appmovies.models.Movie;
-import com.jhancarlos.appmovies.util.SimpleOrientationListener;
+import com.appmovies.HttpRequest.GetMoviesCallback;
+import com.appmovies.Manager.MoviesManagerGET;
+import com.appmovies.R;
+import com.appmovies.activities.MovieAddActivity;
+import com.appmovies.activities.MovieDetailActivity;
+import com.appmovies.adapters.MoviesRecycleAdapter;
+import com.appmovies.adapters.MoviesRecycleAdapter.ItemRecycleClickListener;
+import com.appmovies.models.Movie;
+import com.appmovies.util.SimpleOrientationListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by DAM on 18/5/15.
- */
 public class GetMoviesFragment extends Fragment implements ItemRecycleClickListener, GetMoviesCallback {
 
     private RecyclerView movieRecyclerView;

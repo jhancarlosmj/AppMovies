@@ -1,10 +1,10 @@
-package com.jhancarlos.appmovies.HttpRequest;
+package com.appmovies.HttpRequest;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.jhancarlos.appmovies.models.Movie;
-import com.jhancarlos.appmovies.util.Configuration;
+import com.appmovies.models.Movie;
+import com.appmovies.util.Configuration;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;

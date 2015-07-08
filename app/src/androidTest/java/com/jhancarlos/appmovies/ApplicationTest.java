@@ -1,4 +1,4 @@
-package com.jhancarlos.appmovies;
+package com.appmovies;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
